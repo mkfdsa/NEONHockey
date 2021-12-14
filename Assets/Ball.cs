@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -26,16 +26,16 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Œ»Ý‚Ì‘¬“x‚ðŽæ“¾
+        // ç¾åœ¨ã®é€Ÿåº¦ã‚’å–å¾—
         Vector2 velocity = myRigidBody.velocity;
-        // ‘¬‚³‚ðŒvŽZ
+        // é€Ÿã•ã‚’è¨ˆç®—
         float clampedSpeed = Mathf.Clamp(velocity.magnitude, minSpeed, maxSpeed);
-        // ‘¬“x‚ð•ÏX
+        // é€Ÿåº¦ã‚’å¤‰æ›´
         myRigidBody.velocity = velocity.normalized * clampedSpeed;
 
 
-        // ŠO‚Éo‚ê‚ÎAÄ¶¬
-        // À•WŽæ“¾
+        // å¤–ã«å‡ºã‚Œã°ã€å†ç”Ÿæˆ
+        // åº§æ¨™å–å¾—
         if (transform.position.x > 5)
         {
             transform.position = new Vector3(0, 0, 0);
