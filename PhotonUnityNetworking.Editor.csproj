@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E995635A-ABB5-FCEF-E112-7F1D6D76320F}</ProjectGuid>
+    <ProjectGuid>{0378E48C-1725-4A20-0160-495776A93DBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonUnityNetworking.Editor</AssemblyName>
@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.23f1</UnityVersion>
@@ -55,17 +55,17 @@
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\PhotonViewHandler.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\PunSceneSettingsInspector.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\ReordableList\ReorderableListResources.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonTransformViewClassicEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonAnimatorViewEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonRigidbody2DViewEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\ServerSettingsInspector.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonRigidbodyViewEditor.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\PunSceneSettings.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\PhotonEditor.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonTransformViewClassicEditor.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\ReordableList\ReorderableListResources.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\MonoBehaviourPunEditor.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonTransformViewEditor.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonAnimatorViewEditor.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\ServerSettingsInspector.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\PhotonViewInspector.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonRigidbody2DViewEditor.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\PhotonRigidbodyViewEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\Views\MonoBehaviourPunEditor.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Editor\PhotonGUI.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -308,25 +308,25 @@
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\15.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
       <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -694,11 +694,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{8D045F00-D8B7-EB10-B456-A5C3912EF459}</Project>
+      <Project>{03A1E5BD-031B-3186-352B-DFF14AAD8E51}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{D8C69336-24D4-CDDF-E241-357061B3AB51}</Project>
+      <Project>{DDA1E82C-62AC-C4F3-FF67-8562D24FD810}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
   </ItemGroup>

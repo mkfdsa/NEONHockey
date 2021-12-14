@@ -1,10 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // ’Ç‰Á
+    // è¿½åŠ 
     private Vector3 screenPoint;
     private Vector3 offset;
 
@@ -25,18 +25,18 @@ public class Player : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 
         transform.position = new Vector2(
-            //ƒGƒŠƒAw’è‚µ‚ÄˆÚ“®‚·‚é
+            //ã‚¨ãƒªã‚¢æŒ‡å®šã—ã¦ç§»å‹•ã™ã‚‹
             Mathf.Clamp(transform.position.x + moveX, -1.8f, 1.8f), positionRow
         );
     }
 
-    // ’Ç‰Á
+    // è¿½åŠ 
     void OnMouseDown()
     {
         this.screenPoint = Camera.main.WorldToScreenPoint(transform.position);
         this.offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, positionY, screenPoint.z));
     }
-    // ’Ç‰Á
+    // è¿½åŠ 
     void OnMouseDrag()
     {
         Vector3 currentScreenPoint = new Vector3(Input.mousePosition.x, positionY, screenPoint.z);
