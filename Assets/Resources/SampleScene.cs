@@ -1,27 +1,27 @@
-using Photon.Pun;
+ï»¿using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 
-// MonoBehaviourPunCallbacks‚ğŒp³‚µ‚ÄAPUN‚ÌƒR[ƒ‹ƒoƒbƒN‚ğó‚¯æ‚ê‚é‚æ‚¤‚É‚·‚é
+// MonoBehaviourPunCallbacksã‚’ç¶™æ‰¿ã—ã¦ã€PUNã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’å—ã‘å–ã‚Œã‚‹ã‚ˆã†ã«ã™ã‚‹
 public class SampleScene : MonoBehaviourPunCallbacks
 {
     private void Start()
     {
-        // PhotonServerSettings‚Ìİ’è“à—e‚ğg‚Á‚Äƒ}ƒXƒ^[ƒT[ƒo[‚ÖÚ‘±‚·‚é
+        // PhotonServerSettingsã®è¨­å®šå†…å®¹ã‚’ä½¿ã£ã¦ãƒã‚¹ã‚¿ãƒ¼ã‚µãƒ¼ãƒãƒ¼ã¸æ¥ç¶šã™ã‚‹
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    // ƒ}ƒXƒ^[ƒT[ƒo[‚Ö‚ÌÚ‘±‚ª¬Œ÷‚µ‚½‚ÉŒÄ‚Î‚ê‚éƒR[ƒ‹ƒoƒbƒN
+    // ãƒã‚¹ã‚¿ãƒ¼ã‚µãƒ¼ãƒãƒ¼ã¸ã®æ¥ç¶šãŒæˆåŠŸã—ãŸæ™‚ã«å‘¼ã°ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯
     public override void OnConnectedToMaster()
     {
-        // "Room"‚Æ‚¢‚¤–¼‘O‚Ìƒ‹[ƒ€‚ÉQ‰Á‚·‚éiƒ‹[ƒ€‚ª‘¶İ‚µ‚È‚¯‚ê‚Îì¬‚µ‚ÄQ‰Á‚·‚éj
+        // "Room"ã¨ã„ã†åå‰ã®ãƒ«ãƒ¼ãƒ ã«å‚åŠ ã™ã‚‹ï¼ˆãƒ«ãƒ¼ãƒ ãŒå­˜åœ¨ã—ãªã‘ã‚Œã°ä½œæˆã—ã¦å‚åŠ ã™ã‚‹ï¼‰
         PhotonNetwork.JoinOrCreateRoom("Room", new RoomOptions(), TypedLobby.Default);
     }
 
-    // ƒQ[ƒ€ƒT[ƒo[‚Ö‚ÌÚ‘±‚ª¬Œ÷‚µ‚½‚ÉŒÄ‚Î‚ê‚éƒR[ƒ‹ƒoƒbƒN
+    // ã‚²ãƒ¼ãƒ ã‚µãƒ¼ãƒãƒ¼ã¸ã®æ¥ç¶šãŒæˆåŠŸã—ãŸæ™‚ã«å‘¼ã°ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯
     public override void OnJoinedRoom()
     {
-        // ƒ‰ƒ“ƒ_ƒ€‚ÈÀ•W‚É©g‚ÌƒAƒoƒ^[iƒlƒbƒgƒ[ƒNƒIƒuƒWƒFƒNƒgj‚ğ¶¬‚·‚é
+        // ãƒ©ãƒ³ãƒ€ãƒ ãªåº§æ¨™ã«è‡ªèº«ã®ã‚¢ãƒã‚¿ãƒ¼ï¼ˆãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆï¼‰ã‚’ç”Ÿæˆã™ã‚‹
         // var position = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f));
         var Player_1_position = new Vector3(0, -5);
         PhotonNetwork.Instantiate("Player_1", Player_1_position, Quaternion.identity);

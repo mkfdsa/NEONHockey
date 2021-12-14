@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -26,16 +26,16 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 現在の速度を取得
+        // ���݂̑��x��擾
         Vector2 velocity = myRigidBody.velocity;
-        // 速さを計算
+        // ������v�Z
         float clampedSpeed = Mathf.Clamp(velocity.magnitude, minSpeed, maxSpeed);
-        // 速度を変更
+        // ���x��ύX
         myRigidBody.velocity = velocity.normalized * clampedSpeed;
 
 
-        // 外に出れば、再生成
-        // 座標取得
+        // �O�ɏo��΁A�Đ���
+        // ���W�擾
         if (transform.position.x > 5)
         {
             transform.position = new Vector3(0, 0, 0);
