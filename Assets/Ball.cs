@@ -26,16 +26,16 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Œ»Ý‚Ì‘¬“x‚ðŽæ“¾
+        // ï¿½ï¿½ï¿½Ý‚Ì‘ï¿½ï¿½xï¿½ï¿½æ“¾
         Vector2 velocity = myRigidBody.velocity;
-        // ‘¬‚³‚ðŒvŽZ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Z
         float clampedSpeed = Mathf.Clamp(velocity.magnitude, minSpeed, maxSpeed);
-        // ‘¬“x‚ð•ÏX
+        // ï¿½ï¿½ï¿½xï¿½ï¿½ÏX
         myRigidBody.velocity = velocity.normalized * clampedSpeed;
 
 
-        // ŠO‚Éo‚ê‚ÎAÄ¶¬
-        // À•WŽæ“¾
+        // ï¿½Oï¿½Éoï¿½ï¿½ÎAï¿½Äï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½Wï¿½æ“¾
         if (transform.position.x > 5)
         {
             transform.position = new Vector3(0, 0, 0);

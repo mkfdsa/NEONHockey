@@ -1,12 +1,12 @@
-using Photon.Pun;
+ï»¿using Photon.Pun;
 using UnityEngine;
 
-// MonoBehaviourPunCallbacks‚ğŒp³‚µ‚ÄAphotonViewƒvƒƒpƒeƒB‚ğg‚¦‚é‚æ‚¤‚É‚·‚é
+// MonoBehaviourPunCallbacksã‚’ç¶™æ‰¿ã—ã¦ã€photonViewãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ä½¿ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹
 public class AvatarController : MonoBehaviourPunCallbacks
 {
     private void Update()
     {
-        // ©g‚ª¶¬‚µ‚½ƒIƒuƒWƒFƒNƒg‚¾‚¯‚ÉˆÚ“®ˆ—‚ğs‚¤
+        // è‡ªèº«ãŒç”Ÿæˆã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã ã‘ã«ç§»å‹•å‡¦ç†ã‚’è¡Œã†
         if (photonView.IsMine)
         {
             var input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
