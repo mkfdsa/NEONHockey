@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerNameLabel_1
+  - PlayerNameLabel_2
   layers:
   - Default
   - TransparentFX

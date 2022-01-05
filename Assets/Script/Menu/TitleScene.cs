@@ -99,26 +99,8 @@ public class TitleScene : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("ルーム入った");
+        //Debug.Log("ルーム入った");
 
-        if (!(HostPanel.activeSelf))
-        {
-            HostPanel.SetActive(true);
-            JoinPanel.SetActive(false);
-        }
-        
-
-        RoomId_Value.text = RoomId;
-
-        // P1_Name 値が入ってなかったら　２P とする
-        if (P1_Name.text == "")
-        {
-            P1_Name.text = PhotonNetwork.NickName;
-        }
-        else
-        {
-            P2_Name.text = PhotonNetwork.NickName;
-        }
     }
 
 
